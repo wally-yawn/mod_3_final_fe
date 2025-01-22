@@ -6,6 +6,35 @@ import Header from "./Header/Header"
 import ItineraryContainer from './ItineraryContainer/ItineraryContainer';
 
 function App() {
+  const [itineraries, setItineraries] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchItineraries();
+  }, []);
+
+  const fetchItineraries = async () => {
+    try {
+      fetch("http://localhost:3000/api/v1/itineraries", {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json'}
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Failed to fetch itineraries. Status: ${response.status}`)
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setItineraries(data)
+        })
+
+      }
+    catch (error) {
+      setError(error.message)
+    }
+  }
+
   return (
     <Router>
       <div className="App">
