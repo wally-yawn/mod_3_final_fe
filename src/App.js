@@ -9,10 +9,15 @@ import Details from './Details/Details';
 function App() {
   const [itineraries, setItineraries] = useState([]);
   const [error, setError] = useState(null);
+  const [selectedOption, setSelectedOption] = useState('all');
 
   useEffect(() => {
     fetchItineraries();
   }, []);
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
   const fetchItineraries = async () => {
     try {
@@ -47,9 +52,40 @@ function App() {
                 <Header 
                   key={"header"}
                 />
+                <section className="radio-selectors">
+                  <h2>See selected days</h2>
+                  <label>
+                    <input 
+                      type="radio" 
+                      value="all" 
+                      checked={selectedOption === 'all'} 
+                      onChange={handleChange} 
+                    />
+                    All
+                  </label>
+                  <label>
+                    <input 
+                      type="radio" 
+                      value='2025-02-01'
+                      checked={selectedOption === '2025-02-01'} 
+                      onChange={handleChange} 
+                    />
+                    Day 1
+                  </label>
+                  <label>
+                    <input 
+                      type="radio" 
+                      value='2025-02-02'
+                      checked={selectedOption === '2025-02-02'} 
+                      onChange={handleChange} 
+                    />
+                    Day 2
+                  </label>
+                </section>
                 <ItineraryContainer
                   key={"itinerarycontainer"}
                   itineraries={itineraries}
+                  filter={selectedOption}
                 />
               </>
             }

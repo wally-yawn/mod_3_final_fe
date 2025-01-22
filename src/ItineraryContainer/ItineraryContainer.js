@@ -3,12 +3,23 @@ import './ItineraryContainer.css';
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function ItineraryContainer( {itineraries}){
+function ItineraryContainer( {itineraries, filter}){
 
   let allItineraries = null;
 
-  if (itineraries?.data?.length > 0) {
-    allItineraries = itineraries.data.map((itinerary) => {
+  let filteredItineraries = itineraries;
+
+  {
+    filteredItineraries = itineraries.data.filter((itinerary) => {
+      if (filter !== 'all'){
+        return itinerary.attributes.date === filter;
+      }
+      return itinerary;
+    });
+  }
+  console.log("filteredItineraries: ", filteredItineraries)
+  if (filteredItineraries?.length > 0) {
+    allItineraries = filteredItineraries.map((itinerary) => {
       return (
         <div key={itinerary.id}>
           <Link to={`/itinerary/${itinerary.id}`}>
@@ -26,7 +37,6 @@ function ItineraryContainer( {itineraries}){
 
   return (
     <section className="itineraries-container">
-      {console.log("all itineraries: ", allItineraries, ", itineraries: ", itineraries)}
       <h2>Current Itineraries</h2>
       {itineraries === null ?(
         <p className="null-message">No itineraries to show</p>
