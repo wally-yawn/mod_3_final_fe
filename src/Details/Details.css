@@ -1,3 +1,4 @@
 .details-container {
   border: thick black solid;
+  flex-wrap: wrap;
 }
