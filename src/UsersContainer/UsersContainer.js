@@ -1,9 +1,11 @@
-import UserCard from '../UserCard/UserCard';
-import './UserContainer.css';
+// import UserCard from '../UserCard/UserCard';
+// import './UserContainer.css';
 import React, { useState, useEffect } from "react";
 
-function UserCard(){
-
+function UsersContainer(){
+  return(
+    <p>hello from users container</p>
+  )
 }
 
-export default UserCard;
+export default UsersContainer;

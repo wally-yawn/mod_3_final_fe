@@ -1,6 +1,8 @@
 import './Details.css';
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
+import UsersContainer from '../UsersContainer/UsersContainer';
+import ShowsContainer from '../ShowsContainer/ShowsContainer';
 
 function Details(props) {
   const [shows, setShows] = useState([]);
@@ -55,9 +57,30 @@ function Details(props) {
         <img className="itinerary-img" src = {details.data.attributes.img_url} alt={`${details.data.attributes.title} image`}></img>
       </section>
       <section className="shows-and-users-container">
-        <p>this is the shows and users container</p>
+        <section className="users">
+          {users === null ?(
+            <p className="null-message">No users to show</p>
+            ) : (
+              <UsersContainer
+                key={"user-container"}
+                users={users}
+              />
+            )
+          }
+        <section className="shows">
+          {shows === null ?(
+            <p className="null-message">No shows to show</p>
+            ) : (
+              <ShowsContainer
+                key={"show-container"}
+                users={shows}
+              />
+            )
+          }
+        </section>
       </section>
     </section>
+  </section>
   )
 }
 
