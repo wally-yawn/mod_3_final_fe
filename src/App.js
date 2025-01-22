@@ -48,6 +48,7 @@ function App() {
                 />
                 <ItineraryContainer
                   key={"itinerarycontainer"}
+                  itineraries={itineraries}
                 />
               </>
             }
