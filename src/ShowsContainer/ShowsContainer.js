@@ -9,7 +9,7 @@ function ShowsContainer(shows){
   if (shows.shows.length > 0) {
     allCards = shows.shows.map((show) => {
       return (
-        <div className="show-card" key={show.id}>
+        <div className="show" key={show.id}>
           <ShowCard
             id={show.id}
             name={show.name}

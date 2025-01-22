@@ -1,0 +1,33 @@
+{
+  "data": {
+      "id": 1,
+      "type": "itinerary",
+      "attributes": {
+          "title": "CO Bands Day 1",
+          "date": "2025-02-01",
+          "img_url": "https://yocolorado.com/cdn/shop/articles/YoColorado-130793-Colors-Colorado-Flag-Blogbanner1.jpg?v=1651160341\u0026width=1400",
+          "users": [
+              {
+                  "id": 1,
+                  "first_name": "Wally",
+                  "last_name": "Wallace",
+                  "email": "wwallace24@turing.edu"
+              },
+              {
+                  "id": 2,
+                  "first_name": "Dahlia",
+                  "last_name": "Wallace",
+                  "email": "dahila@cat.com"
+              }
+          ],
+          "shows": [
+              {
+                  "id": 1,
+                  "name": "The Deceitful Mind",
+                  "date": "2025-02-01",
+                  "time": "2000-01-01T04:00:00.000Z"
+              }
+          ]
+      }
+  }
+}

@@ -8,7 +8,7 @@ function UsersContainer(users){
   if (users.users.length > 0) {
     allCards = users.users.map((user) => {
       return (
-        <div className="user-card" key={user.id}>
+        <div className="user" key={user.id}>
           <UserCard
             id={user.id}
             first_name={user.first_name}
