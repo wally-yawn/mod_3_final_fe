@@ -1,0 +1,10 @@
+.itinerary-card {
+  border: black thick solid;
+  height: fit-content;
+  background-color: gray;
+  border-radius: 5%;
+}
+
+.itinerary-img {
+  height: 20em;
+}

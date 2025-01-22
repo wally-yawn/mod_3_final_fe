@@ -53,6 +53,12 @@ function App() {
               </>
             }
           />
+          <Route
+            path="itinerary/:id"
+            element={
+              <p>test</p>
+            }
+          />
         </Routes>
       </div>
     </Router>

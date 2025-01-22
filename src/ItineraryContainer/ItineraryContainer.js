@@ -1,6 +1,7 @@
 import ItineraryCard from '../ItineraryCard/ItineraryCard';
 import './ItineraryContainer.css';
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ItineraryContainer( {itineraries}){
 
@@ -9,16 +10,18 @@ function ItineraryContainer( {itineraries}){
   if (itineraries?.data?.length > 0) {
     allItineraries = itineraries.data.map((itinerary) => {
       return (
-        <ItineraryCard
-          id={itinerary.id}
-          key={itinerary.id}
-          date={itinerary.attributes.date}
-          title={itinerary.attributes.title}
-          img_url={itinerary.attributes.img_url}
-        />
-        )
-      }
-    )
+        <div key={itinerary.id}>
+          <Link to={`/itinerary/${itinerary.id}`}>
+            <ItineraryCard
+              id={itinerary.id}
+              date={itinerary.attributes.date}
+              title={itinerary.attributes.title}
+              img_url={itinerary.attributes.img_url}
+            />
+          </Link>
+        </div>
+      )
+    })
   }
 
   return (
