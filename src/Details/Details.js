@@ -25,13 +25,13 @@ function Details(props) {
           }
           return response.json();
         })
-        .then((data) => {
-          setDetails(data);
-          if (data?.attributes?.shows?.length > 0) {
-            setShows(data.attributes.shows);
+        .then((response_data) => {
+          setDetails(response_data);
+          if (response_data?.data?.attributes?.shows?.length > 0) {
+            setShows(response_data.data.attributes.shows);
           }
-          if (data?.attributes?.users?.length > 0) {
-            setUsers(data.attributes.users);
+          if (response_data?.data?.attributes?.users?.length > 0) {
+            setUsers(response_data.data.attributes.users);
           }
         })
       }
@@ -47,7 +47,7 @@ function Details(props) {
   if (!details) {
     return <p className="loading-message">Loading itinerary details...</p>;
   }
-  
+
   return(
     <section className="details-container">
       <section className="details">
