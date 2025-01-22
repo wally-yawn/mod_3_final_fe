@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header/Header"
 import ItineraryContainer from './ItineraryContainer/ItineraryContainer';
+import Details from './Details/Details';
 
 function App() {
   const [itineraries, setItineraries] = useState([]);
@@ -56,7 +57,14 @@ function App() {
           <Route
             path="itinerary/:id"
             element={
-              <p>test</p>
+              <>
+                <Header 
+                  key={"header"}
+                />
+                <Details>
+                  key={"details"}
+                </Details>
+              </>
             }
           />
         </Routes>
