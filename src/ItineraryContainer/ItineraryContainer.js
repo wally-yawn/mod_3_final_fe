@@ -7,17 +7,18 @@ function ItineraryContainer( {itineraries, filter}){
 
   let allItineraries = null;
 
-  let filteredItineraries = itineraries;
-
-  {
-    filteredItineraries = itineraries.data.filter((itinerary) => {
+  console.log("itineraries in container: ", itineraries, " filter: ", filter)
+  
+  let filteredItineraries = Array.isArray(itineraries?.data)
+    ? itineraries.data.filter((itinerary) => {
       if (filter !== 'all'){
         return itinerary.attributes.date === filter;
       }
-      return itinerary;
-    });
-  }
-  console.log("filteredItineraries: ", filteredItineraries)
+        return true;
+    })
+    : []
+  
+  // console.log("filteredItineraries: ", filteredItineraries)
   if (filteredItineraries?.length > 0) {
     allItineraries = filteredItineraries.map((itinerary) => {
       return (

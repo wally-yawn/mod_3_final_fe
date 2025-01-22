@@ -41,6 +41,7 @@ function App() {
     }
   }
 
+    console.log("itineraries in app: ", itineraries)
   return (
     <Router>
       <div className="App">
