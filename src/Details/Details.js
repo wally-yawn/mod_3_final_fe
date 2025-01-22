@@ -50,6 +50,8 @@ function Details(props) {
     return <p className="loading-message">Loading itinerary details...</p>;
   }
 
+  console.log("shows from details: ", shows)
+  
   return(
     <section className="details-container">
       <section className="details">
@@ -67,20 +69,20 @@ function Details(props) {
               />
             )
           }
+        </section>
         <section className="shows">
           {shows === null ?(
             <p className="null-message">No shows to show</p>
             ) : (
               <ShowsContainer
                 key={"show-container"}
-                users={shows}
+                shows={shows}
               />
             )
           }
         </section>
       </section>
     </section>
-  </section>
   )
 }
 

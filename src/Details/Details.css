@@ -1,4 +1,22 @@
 .details-container {
   border: thick black solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.shows-and-users-container {
+  display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: first baseline;
+  border: thick black solid;
+}
+
+.users {
+  border: thick black solid;
+}
+
+.shows {
+  border: thick black solid;
 }

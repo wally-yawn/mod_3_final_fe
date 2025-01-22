@@ -1,10 +1,11 @@
-.users-container {
-  border: thick solid black;
-}
-
-.users {
+.all-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.show-card {
+  border: thick red solid;
+  width: 100%;
 }
