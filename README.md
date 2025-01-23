@@ -15,6 +15,7 @@ The app is built using **React** and leverages **React Router** for navigation, 
 - **Testing**: End-to-end testing with **Cypress** ensures that the app functions correctly and meets user story requirements.
 
 ## App Demo
+![chrome-capture-2025-1-22](https://github.com/user-attachments/assets/7694366f-ad52-46fa-b161-7ec37b436097)
 
 ## Team Member
 #### Wally Wallace
