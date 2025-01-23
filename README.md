@@ -14,6 +14,9 @@ The app is built using **React** and leverages **React Router** for navigation, 
 - **React Router**: Implemented for seamless navigation between pages, ensuring a dynamic and user-friendly experience.
 - **Testing**: End-to-end testing with **Cypress** ensures that the app functions correctly and meets user story requirements.
 
+## Componenet Diagram
+![Screenshot 2025-01-23 at 9 33 34 AM](https://github.com/user-attachments/assets/ca2793e2-d063-4fad-b39d-6691e9062200)
+
 ## App Demo
 ![chrome-capture-2025-1-22](https://github.com/user-attachments/assets/7694366f-ad52-46fa-b161-7ec37b436097)
 
