@@ -9,6 +9,9 @@ The festival app is an admin utility for viewing details of the various shows, i
 
 The app is built using **React** and leverages **React Router** for navigation, and communicates to a back end rails application that lives here: [Back End](https://github.com/wally-yawn/rails-api-starter-final)
 
+## Installation Instructions
+Clone this repo, then run `npm install`, `npm install react-router-dome`, then `npm start` 
+
 ## Approaches to Building
 - **Component-Driven Development**: The app is structured with reusable components such as `UserCards`, `ShowCards`, `ItineraryCards`, `UserContainer`, `ShowContainer`, `ItineraryContainer`, `Details` and `App` to improve maintainability and scalability.
 - **React Router**: Implemented for seamless navigation between pages, ensuring a dynamic and user-friendly experience.
